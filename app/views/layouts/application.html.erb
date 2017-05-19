@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accordions</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="wrapper">
+        <div class="clearfix">
+          <div id="logo"><%= link_to(t('accordeons'), root_path) %></div>
+          <nav>
+            <% if user_signed_in? %>
+                <%= link_to(current_user.email, edit_user_registration_path) %>
+                <%= link_to(t('create_new_post'), new_post_path, class: "button") %>
+                <%= link_to(t('logout'), destroy_user_session_path, method: :delete) %>
+            <% else %>
+                <%= link_to(t('devise.sessions.new.sign_in'), new_user_session_path) %>
+                <%= link_to(t('devise.registrations.new.sign_up'), new_user_registration_path, class: "button") %>
+            <% end %>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <div class="wrapper"> <%= yield %> </div>
+  </body>
+</html>

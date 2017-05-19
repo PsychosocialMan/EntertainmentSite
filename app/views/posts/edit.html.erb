@@ -1,0 +1,10 @@
+<div class="new_post">
+  <%= form_for :post, url: '/posts' do |f| %>
+      <div class="headline_post"> <%= t('update_your_post') %> </div>
+      <%= t('image') %><br><br> <%= f.file_field(:image) %><br><br>
+      <%= t('title') %> <br><%= f.text_field(:title) %><br>
+      <%= t('link') %> <br><%= f.text_field(:link) %><br>
+      <%= t('description') %><br> <%= f.text_field(:description) %><br>
+      <%= f.submit(t('update')) %>
+  <% end %>
+</div>

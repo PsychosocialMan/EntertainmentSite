@@ -1,0 +1,78 @@
+form:not([id = "new_comment"] [id = "button_to"]) {
+  margin:10px;
+  max-width:60%;
+  box-sizing:border-box;
+  padding:40px;
+  border-radius:5px;
+  background:RGBA(255,255,255,1);
+  -webkit-box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);
+  box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);
+}
+.field, .new_post form {
+  margin-bottom: 10px;
+  em{
+    font-size: 15px;
+    color: gray;
+  }
+  i{
+    color: gray;
+    font-size: 13px;
+  }
+  input[type="text"], input[type="password"], input[type="email"]{
+    height: 40px;
+    width: 85%;
+    border-radius: 3px;
+    border: rgba(0, 0, 0, .3) 2px solid;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    padding: 8px;
+    margin: 10px 0;
+    label {
+
+      margin-bottom: 10px;
+    }
+  }
+  input[type = "file"]{
+    border: rgba(0, 0, 0, .3) 2px solid;
+    padding:5px;
+  }
+}
+.actions input, input[type="submit"] {
+  border: 1px solid #9B9B9B;
+  padding: .7rem 1.25rem;
+  border-radius: .3rem;
+  outline: none;
+  background: white;
+  color: gray;
+  margin-bottom: 10px;
+}
+a{
+  line-height: 2;
+  color: gray;
+  text-decoration: none;
+  margin:10px 0;
+}
+
+
+h2, #delete, .headline_post{
+  margin-bottom: 20px;
+  color: #343434;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 35px;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+.alert{
+  font-size: 15px;
+  padding-left: 10%;
+  color: #730E15;
+}
+.notice{
+  font-size: 15px;
+  padding-left: 10%;
+  color: darkgreen;
+}
+
+
